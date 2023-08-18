@@ -46,6 +46,6 @@ OPTIMIZER:
   LR: 1e-3
 
 
-DEBUG: False
+DEBUG: True
 OUTPUT_DIR: "./exp/DERNN_LNLT_5stg_real/"
 PRETRAINED_CKPT_PATH: "./checkpoints/dernn_lnlt_5stg_real.pth"

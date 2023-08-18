@@ -45,7 +45,7 @@ OPTIMIZER:
   LR: 1e-3
 
 
-DEBUG: False
+DEBUG: True
 OUTPUT_DIR: "./exp/DERNN_LNLT_9stg_star_simu/"
 RESUME_CKPT_PATH: ""
 PRETRAINED_CKPT_PATH: "./checkpoints/dernn_lnlt_9stg_star_simu.pth"

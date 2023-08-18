@@ -1,0 +1,4 @@
+*.pyc
+datasets/*
+.DS_Store
+exp/*

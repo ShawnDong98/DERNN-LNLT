@@ -1,0 +1,51 @@
+DATASETS:
+  STEP: 2
+  WAVE_LENS: 28
+  MASK_TYPE: "mask_3d_shift"
+  
+  TRAIN:
+    ITERATION: 3000
+    CROP_SIZE: [256, 256]
+    WITH_NOISE: False
+    PATHS:
+      - "./datasets/CSI/cave_1024_28"
+    MASK_PATH: "./datasets/CSI/TSA_simu_data/mask_3d_shift.mat"
+    RANDOM_MASK: False
+  VAL:
+    PATH: "./datasets/CSI/TSA_simu_data/Truth/"
+    MASK_PATH: "./datasets/CSI/TSA_simu_data/mask_3d_shift.mat"
+  TEST:
+    PATH: "./datasets/CSI/TSA_real_data/Measurements/"
+    MASK_PATH: "./datasets/CSI/TSA_real_data/mask_3d_shift.mat"
+
+  
+DATALOADER:
+  BATCH_SIZE: 3
+  NUM_WORKERS: 8
+
+MODEL:
+  DENOISER:
+    TYPE: "DERNN_LNLT"
+    DERNN_LNLT:
+      IN_DIM: 29
+      DIM: 28
+      OUT_DIM: 28
+      WINDOW_SIZE: [8, 8]
+      WINDOW_NUM: [8, 8]
+      LOCAL: True
+      NON_LOCAL: True
+      NUM_BLOCKS: [1, 1, 1, 1, 1]
+      LAYERNORM_TYPE: "WithBias"
+      FFN_NAME: "Gated_Dconv_FeedForward"
+      STAGE: 9
+      SHARE_PARAMS: True
+
+
+OPTIMIZER:
+  LR: 1e-3
+
+
+DEBUG: False
+OUTPUT_DIR: "./exp/DERNN_LNLT_9stg_simu/"
+RESUME_CKPT_PATH: ""
+PRETRAINED_CKPT_PATH: "./checkpoints/dernn_lnlt_9stg_simu.pth"

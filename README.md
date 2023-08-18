@@ -85,6 +85,23 @@ Download pretrained weights ([Baidu Disk](https://pan.baidu.com/s/1BBQbFnYXx-glq
 
 ### Training
 
+```
+cd DERNN_LNLT/
+
+# DERNN-LNLT 5stage
+bash ./scripts/train_dernn_lnlt_5stg_simu.sh
+
+# DERNN-LNLT 7stage
+bash ./scripts/train_dernn_lnlt_7stg_simu.sh
+
+# DERNN-LNLT 9stage
+bash ./scripts/train_dernn_lnlt_9stg_simu.sh
+
+# DERNN-LNLT 9stage*
+bash ./scripts/train_dernn_lnlt_9stg_star_simu.sh
+```
+
+The training log, trained model, and reconstrcuted HSI will be available in `DERNN_LNLT/exp/` .
 
 ### Testing
 

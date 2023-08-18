@@ -18,7 +18,7 @@ Comparison of PSNR-Params with previous HSI DUNs. The PSNR (in dB) is plotted on
 # Architecture
 
 <div align=center>
-<img src="./figures/architecture.png" width = "700" height = "300" alt="">
+<img src="./figures/architecture.png" width = "700" height = "640" alt="">
 </div>
 
 The DERNN-LNLT alternatively solves a data problem and a prior subproblem in each recurrent step. Firstly, the DERNN-LNLT unfolds the HQS algorithm within the MAP framework and transfors the DUN into an RNN by sharing parameters across stages.  Then, the DERNN-LNLT integrate the Degradation Estimation Network into the RNN, which estimates the degradation matrix for the data subproblem and the noise level for the prior subproblem by residual learning with reference to the sensing matrix.
@@ -66,19 +66,18 @@ Download cave_1024_28 ([Baidu Disk](https://pan.baidu.com/s/1X_uXxgyO-mslnCTn4io
                     |--scene2.mat
                     ： 
                     |--scene5.mat
+    |--checkpoints
     |--csi
     |--scripts
     |--tools
+    |--results
     |--Quality_Metrics
     |--visualization
 ```
 
 We use the CAVE dataset (cave_1024_28) as the simulation training set. Both the CAVE (cave_1024_28) and KAIST (KAIST_CVPR2021) datasets are used as the real training set.
 
-
 ## Pretrained weights
-
-
 
 Download pretrained weights ([Baidu Disk](https://pan.baidu.com/s/1BBQbFnYXx-glqYkrZ9DCSQ), code: `lnlt` | [Google Drive](https://drive.google.com/drive/folders/1aVGHRcHB2svBoYkM3pPCbZO765EXpLd8?usp=sharing)) and put them into `DERNN_LNLT/checkpoints/`
 

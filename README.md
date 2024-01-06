@@ -199,4 +199,12 @@ If this code helps you, please consider citing our works:
   journal={arXiv preprint arXiv:2311.08808},
   year={2023}
 }
+
+@inproceedings{rdluf_mixs2,
+  title={Residual Degradation Learning Unfolding Framework with Mixing Priors across Spectral and Spatial for Compressive Spectral Imaging},
+  author={Dong, Yubo and Gao, Dahua and Qiu, Tian and Li, Yuyan and Yang, Minxi and Shi, Guangming},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={22262--22271},
+  year={2023}
+}
 ```

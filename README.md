@@ -21,8 +21,7 @@ Comparison of PSNR-Params with previous HSI DUNs. The PSNR (in dB) is plotted on
 <img src="./figures/architecture.png" width = "700" height = "640" alt="">
 </div>
 
-The DERNN-LNLT alternatively solves a data problem and a prior subproblem in each recurrent step. Firstly, the DERNN-LNLT unfolds the HQS algorithm within the MAP framework and transfors the DUN into an RNN by sharing parameters across stages.  Then, the DERNN-LNLT integrate the Degradation Estimation Network into the RNN, which estimates the degradation matrix for the data subproblem and the noise level for the prior subproblem by residual learning with reference to the sensing matrix.
-Subsequently, the Local and Non-Local Transformer (LNLT) utilizes the Local and Non-Local Multi-head Self-Attention (MSA) to effectively exploit both local and non-local HSIs priors. Finally, incorporating the LNLT into the DERNN as the denoiser for the prior subproblem leads to the proposed DERNN-LNLT.
+The DERNN-LNLT alternatively solves a data problem and a prior subproblem in each recurrent step. Firstly, the DERNN-LNLT unfolds the HQS algorithm within the MAP framework and transfors the DUN into an RNN by sharing parameters across stages.  Then, the DERNN-LNLT integrate the Degradation Estimation Network into the RNN, which estimates the degradation matrix for the data subproblem and the noise level for the prior subproblem by residual learning with reference to the sensing matrix. Subsequently, the Local and Non-Local Transformer (LNLT) utilizes the Local and Non-Local Multi-head Self-Attention (MSA) to effectively exploit both local and non-local HSIs priors. Finally, incorporating the LNLT into the DERNN as the denoiser for the prior subproblem leads to the proposed DERNN-LNLT.
 
 # Usage 
 
@@ -188,3 +187,16 @@ Our code is based on following codes, thanks for their generous open source:
 - [https://github.com/mengziyi64/TSA-Net](https://github.com/mengziyi64/TSA-Net)
 - [https://github.com/facebookresearch/detectron2](https://github.com/facebookresearch/detectron2)
 
+
+## Citation
+
+If this code helps you, please consider citing our works:
+
+```shell
+@article{dernn_lnlt,
+  title={Degradation Estimation Recurrent Neural Network with Local and Non-Local Priors for Compressive Spectral Imaging},
+  author={Dong, Yubo and Gao, Dahua and Li, Yuyan and Shi, Guangming and Liu, Danhua},
+  journal={arXiv preprint arXiv:2311.08808},
+  year={2023}
+}
+```
